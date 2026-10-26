@@ -1,0 +1,5 @@
+# dsh-session-admin bundle patch
+# 一行宿主插件；id 同时决定浏览器半边的加载地址 /plugins/sessionAdmin/client.js。
+- insert:
+    - id: sessionAdmin
+      name: dsh-session-admin

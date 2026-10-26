@@ -1,0 +1,61 @@
+{
+  "name": "dsh-session-admin",
+  "version": "0.1.0",
+  "description": "Delete archived DSH sessions from disk: sidebar entry plus host routes /session-admin/state and /session-admin/delete.",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "tests"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hehf21/dsh-session-admin.git"
+  },
+  "homepage": "https://github.com/hehf21/dsh-session-admin#readme",
+  "bugs": {
+    "url": "https://github.com/hehf21/dsh-session-admin/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "session",
+    "cleanup"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "meta": {
+    "title": {
+      "en": "Session cleanup",
+      "zh": "会话清理"
+    },
+    "description": {
+      "en": "Delete archived sessions from disk: logs, projection cache and archive markers.",
+      "zh": "把已归档的会话真正删掉：日志文件、投影缓存和归档标记一起清。"
+    }
+  }
+}
